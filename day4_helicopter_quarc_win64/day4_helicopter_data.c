@@ -7,9 +7,9 @@
  *
  * Code generation for model "day4_helicopter".
  *
- * Model version              : 11.13
+ * Model version              : 11.18
  * Simulink Coder version : 9.4 (R2020b) 29-Jul-2020
- * C source code generated on : Sun Apr  3 21:05:33 2022
+ * C source code generated on : Tue Apr  5 19:25:33 2022
  *
  * Target selection: quarc_win64.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -24,12 +24,12 @@
 /* Block parameters (default storage) */
 P_day4_helicopter_T day4_helicopter_P = {
   /* Variable: K
-   * Referenced by: '<S5>/Gain'
+   * Referenced by: '<S5>/K'
    */
-  { -0.944689165354721, -1.8477762830384577E-14, -3.4262661444813203,
-    -5.5107332864453324E-14, 1.8731112513638062, 2.569751968276004E-14,
-    0.725559832518036, 4.6828112033762322E-15, 4.773497658941057E-16,
-    7.1598319964969566, -1.3777882414145814E-15, 9.9820474862613882 },
+  { -2.31516881238222, -2.0341071751189988E-15, -5.6291201480128734,
+    -9.964688848888308E-15, 2.4311598145522413, 5.2871678268851716E-15,
+    0.66915480818708672, 9.9258764579503439E-16, -1.153838811900364E-15,
+    3.9290526689601921, -3.3149494046981773E-16, 3.6315982442094343 },
 
   /* Variable: K_ed
    * Referenced by: '<S3>/K_ed'
@@ -167,7 +167,7 @@ P_day4_helicopter_T day4_helicopter_P = {
   0.0,
 
   /* Expression: 180
-   * Referenced by: '<Root>/Constant'
+   * Referenced by: '<Root>/lambda_0'
    */
   180.0,
 

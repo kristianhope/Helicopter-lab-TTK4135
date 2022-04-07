@@ -7,9 +7,9 @@
  *
  * Code generation for model "day4_helicopter".
  *
- * Model version              : 11.13
+ * Model version              : 11.18
  * Simulink Coder version : 9.4 (R2020b) 29-Jul-2020
- * C source code generated on : Sun Apr  3 21:05:33 2022
+ * C source code generated on : Tue Apr  5 19:25:33 2022
  *
  * Target selection: quarc_win64.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -869,14 +869,14 @@ typedef struct {
   real_T TravelCounttorad;             /* '<S4>/Travel: Count to rad' */
   real_T Gain;                         /* '<S13>/Gain' */
   real_T travel;                       /* '<Root>/Sum3' */
-  real_T Gain_b;                       /* '<S14>/Gain' */
+  real_T Gain_d;                       /* '<S14>/Gain' */
   real_T PitchCounttorad;              /* '<S4>/Pitch: Count to rad' */
-  real_T Gain_n;                       /* '<S10>/Gain' */
-  real_T Gain_k;                       /* '<S11>/Gain' */
+  real_T Gain_i;                       /* '<S10>/Gain' */
+  real_T Gain_b;                       /* '<S11>/Gain' */
   real_T ElevationCounttorad;          /* '<S4>/Elevation: Count to rad' */
-  real_T Gain_d;                       /* '<S8>/Gain' */
+  real_T Gain_e;                       /* '<S8>/Gain' */
   real_T elevation;                    /* '<Root>/Sum' */
-  real_T Gain_i;                       /* '<S9>/Gain' */
+  real_T Gain_dg;                      /* '<S9>/Gain' */
   real_T Sum1;                         /* '<Root>/Sum1' */
   real_T Sum2;                         /* '<Root>/Sum2' */
   real_T Gain_l;                       /* '<S12>/Gain' */
@@ -1035,7 +1035,7 @@ typedef struct {
 /* Parameters (default storage) */
 struct P_day4_helicopter_T_ {
   real_T K[12];                        /* Variable: K
-                                        * Referenced by: '<S5>/Gain'
+                                        * Referenced by: '<S5>/K'
                                         */
   real_T K_ed;                         /* Variable: K_ed
                                         * Referenced by: '<S3>/K_ed'
@@ -1118,8 +1118,8 @@ struct P_day4_helicopter_T_ {
   real_T HILInitialize_POWatchdog;     /* Expression: watchdog_pwm_outputs
                                         * Referenced by: '<Root>/HIL Initialize'
                                         */
-  real_T Constant_Value;               /* Expression: 180
-                                        * Referenced by: '<Root>/Constant'
+  real_T lambda_0_Value;               /* Expression: 180
+                                        * Referenced by: '<Root>/lambda_0'
                                         */
   real_T TravelCounttorad_Gain;        /* Expression: 2*pi/8192
                                         * Referenced by: '<S4>/Travel: Count to rad'
@@ -1136,13 +1136,13 @@ struct P_day4_helicopter_T_ {
   real_T TravelTransferFcn_D;         /* Computed Parameter: TravelTransferFcn_D
                                        * Referenced by: '<S4>/Travel: Transfer Fcn'
                                        */
-  real_T Gain_Gain_b;                  /* Expression: 180/pi
+  real_T Gain_Gain_l;                  /* Expression: 180/pi
                                         * Referenced by: '<S14>/Gain'
                                         */
   real_T PitchCounttorad_Gain;         /* Expression: 2*pi /4096
                                         * Referenced by: '<S4>/Pitch: Count to rad'
                                         */
-  real_T Gain_Gain_j;                  /* Expression: 180/pi
+  real_T Gain_Gain_a;                  /* Expression: 180/pi
                                         * Referenced by: '<S10>/Gain'
                                         */
   real_T PitchTransferFcn_A;           /* Computed Parameter: PitchTransferFcn_A
@@ -1154,13 +1154,13 @@ struct P_day4_helicopter_T_ {
   real_T PitchTransferFcn_D;           /* Computed Parameter: PitchTransferFcn_D
                                         * Referenced by: '<S4>/Pitch: Transfer Fcn'
                                         */
-  real_T Gain_Gain_f;                  /* Expression: 180/pi
+  real_T Gain_Gain_ae;                 /* Expression: 180/pi
                                         * Referenced by: '<S11>/Gain'
                                         */
   real_T ElevationCounttorad_Gain;     /* Expression: -2 * pi /4096
                                         * Referenced by: '<S4>/Elevation: Count to rad'
                                         */
-  real_T Gain_Gain_e;                  /* Expression: 180/pi
+  real_T Gain_Gain_lv;                 /* Expression: 180/pi
                                         * Referenced by: '<S8>/Gain'
                                         */
   real_T elavation_offsetdeg_Value;    /* Expression: -30
@@ -1175,7 +1175,7 @@ struct P_day4_helicopter_T_ {
   real_T ElevationTransferFcn_D;   /* Computed Parameter: ElevationTransferFcn_D
                                     * Referenced by: '<S4>/Elevation: Transfer Fcn'
                                     */
-  real_T Gain_Gain_fa;                 /* Expression: 180/pi
+  real_T Gain_Gain_n;                  /* Expression: 180/pi
                                         * Referenced by: '<S9>/Gain'
                                         */
   real_T Gain1_Gain;                   /* Expression: pi/180
@@ -1196,7 +1196,7 @@ struct P_day4_helicopter_T_ {
   real_T Frontgain_Gain;               /* Expression: 0.5
                                         * Referenced by: '<S1>/Front gain'
                                         */
-  real_T Gain_Gain_ez;                 /* Expression: 180/pi
+  real_T Gain_Gain_a1;                 /* Expression: 180/pi
                                         * Referenced by: '<S12>/Gain'
                                         */
   real_T BackmotorSaturation_UpperSat; /* Expression: 5

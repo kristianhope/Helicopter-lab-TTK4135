@@ -7,9 +7,9 @@
  *
  * Code generation for model "day2_helicopter".
  *
- * Model version              : 11.9
+ * Model version              : 11.16
  * Simulink Coder version : 9.4 (R2020b) 29-Jul-2020
- * C source code generated on : Sun Apr  3 20:40:05 2022
+ * C source code generated on : Tue Apr  5 19:33:01 2022
  *
  * Target selection: quarc_win64.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -877,6 +877,8 @@ typedef struct {
   real_T Gain_e;                       /* '<S7>/Gain' */
   real_T Sum;                          /* '<Root>/Sum' */
   real_T Gain_dg;                      /* '<S8>/Gain' */
+  real_T Sum1;                         /* '<Root>/Sum1' */
+  real_T Sum2;                         /* '<Root>/Sum2' */
   real_T Gain_l;                       /* '<S11>/Gain' */
   real_T BackmotorSaturation;          /* '<S4>/Back motor: Saturation' */
   real_T FrontmotorSaturation;         /* '<S4>/Front motor: Saturation' */
@@ -905,14 +907,14 @@ typedef struct {
   } Scope1_PWORK;                      /* '<Root>/Scope1' */
 
   struct {
-    void *FilePtr;
-  } ToFile3_PWORK;                     /* '<Root>/To File3' */
-
-  struct {
     void *TimePtr;
     void *DataPtr;
     void *RSimInfoPtr;
   } FromWorkspace_PWORK;               /* '<Root>/From Workspace' */
+
+  struct {
+    void *FilePtr;
+  } ToFile3_PWORK;                     /* '<Root>/To File3' */
 
   struct {
     void *LoggedData;
@@ -960,13 +962,13 @@ typedef struct {
   int32_T HILReadEncoderTimebase_Buffer[3];/* '<S4>/HIL Read Encoder Timebase' */
   uint32_T HILInitialize_POSortedChans[8];/* '<Root>/HIL Initialize' */
   struct {
+    int_T PrevIndex;
+  } FromWorkspace_IWORK;               /* '<Root>/From Workspace' */
+
+  struct {
     int_T Count;
     int_T Decimation;
   } ToFile3_IWORK;                     /* '<Root>/To File3' */
-
-  struct {
-    int_T PrevIndex;
-  } FromWorkspace_IWORK;               /* '<Root>/From Workspace' */
 
   int8_T If_ActiveSubsystem;           /* '<S3>/If' */
   int8_T IfActionSubsystem_SubsysRanBC;/* '<S3>/If Action Subsystem' */

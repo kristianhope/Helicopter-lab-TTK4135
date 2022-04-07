@@ -566,8 +566,8 @@
     ;%
     ;% Auto data (day2_helicopter_B)
     ;%
-      section.nData     = 15;
-      section.data(15)  = dumData; %prealloc
+      section.nData     = 17;
+      section.data(17)  = dumData; %prealloc
       
 	  ;% day2_helicopter_B.TravelCounttorad
 	  section.data(1).logicalSrcIdx = 0;
@@ -613,21 +613,29 @@
 	  section.data(11).logicalSrcIdx = 10;
 	  section.data(11).dtTransOffset = 10;
 	
-	  ;% day2_helicopter_B.Gain_l
+	  ;% day2_helicopter_B.Sum1
 	  section.data(12).logicalSrcIdx = 11;
 	  section.data(12).dtTransOffset = 11;
 	
-	  ;% day2_helicopter_B.BackmotorSaturation
+	  ;% day2_helicopter_B.Sum2
 	  section.data(13).logicalSrcIdx = 12;
 	  section.data(13).dtTransOffset = 12;
 	
-	  ;% day2_helicopter_B.FrontmotorSaturation
+	  ;% day2_helicopter_B.Gain_l
 	  section.data(14).logicalSrcIdx = 13;
 	  section.data(14).dtTransOffset = 13;
 	
-	  ;% day2_helicopter_B.In1
+	  ;% day2_helicopter_B.BackmotorSaturation
 	  section.data(15).logicalSrcIdx = 14;
 	  section.data(15).dtTransOffset = 14;
+	
+	  ;% day2_helicopter_B.FrontmotorSaturation
+	  section.data(16).logicalSrcIdx = 15;
+	  section.data(16).dtTransOffset = 15;
+	
+	  ;% day2_helicopter_B.In1
+	  section.data(17).logicalSrcIdx = 16;
+	  section.data(17).dtTransOffset = 16;
 	
       nTotData = nTotData + section.nData;
       sigMap.sections(1) = section;
@@ -762,11 +770,11 @@
 	  section.data(1).logicalSrcIdx = 15;
 	  section.data(1).dtTransOffset = 0;
 	
-	  ;% day2_helicopter_DW.ToFile3_PWORK.FilePtr
+	  ;% day2_helicopter_DW.FromWorkspace_PWORK.TimePtr
 	  section.data(2).logicalSrcIdx = 16;
 	  section.data(2).dtTransOffset = 4;
 	
-	  ;% day2_helicopter_DW.FromWorkspace_PWORK.TimePtr
+	  ;% day2_helicopter_DW.ToFile3_PWORK.FilePtr
 	  section.data(3).logicalSrcIdx = 17;
 	  section.data(3).dtTransOffset = 5;
 	
@@ -863,11 +871,11 @@
       section.nData     = 2;
       section.data(2)  = dumData; %prealloc
       
-	  ;% day2_helicopter_DW.ToFile3_IWORK.Count
+	  ;% day2_helicopter_DW.FromWorkspace_IWORK.PrevIndex
 	  section.data(1).logicalSrcIdx = 36;
 	  section.data(1).dtTransOffset = 0;
 	
-	  ;% day2_helicopter_DW.FromWorkspace_IWORK.PrevIndex
+	  ;% day2_helicopter_DW.ToFile3_IWORK.Count
 	  section.data(2).logicalSrcIdx = 37;
 	  section.data(2).dtTransOffset = 1;
 	
@@ -916,8 +924,8 @@
   ;%
 
 
-  targMap.checksum0 = 2750373368;
-  targMap.checksum1 = 1394997924;
-  targMap.checksum2 = 1010672269;
-  targMap.checksum3 = 4127653228;
+  targMap.checksum0 = 2409171422;
+  targMap.checksum1 = 3954529031;
+  targMap.checksum2 = 1400090890;
+  targMap.checksum3 = 435251521;
 

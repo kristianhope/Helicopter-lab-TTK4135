@@ -1,26 +1,26 @@
 run ('day4_nonlinConstraint.m')
 
-cd ('data_files/day4')
-load('day_4_test1.mat');
-z_real1 = state(:,:);
-load('day_4_test2.mat');
-z_real2 = state(:,:);
-load('day_4_test3.mat');
-z_real3 = state(:,:);
-load('day_4_test4.mat');
-z_real4 = state(:,:);
-load('day_4_test5.mat');
+%cd ('data_files/day4')
+% load('day_4_test1.mat');
+% z_real1 = state(:,:);
+% load('day_4_test2.mat');
+% z_real2 = state(:,:);
+% load('day_4_test3.mat');
+% z_real3 = state(:,:);
+% load('day_4_test4.mat');
+% z_real4 = state(:,:);
+load('day_4_test6.mat');
 z_real5 = state(:,:);
 
-param = [alpha beta lambda_t mx length(z_real1(1,:))];
-c_real1 = gen_con(z_real1, param);
-c_real2 = gen_con(z_real2, param);
-c_real3 = gen_con(z_real3, param);
-c_real4 = gen_con(z_real4, param);
+param = [alpha beta lambda_t mx length(z_real5(1,:))];
+% c_real1 = gen_con(z_real1, param);
+% c_real2 = gen_con(z_real2, param);
+% c_real3 = gen_con(z_real3, param);
+% c_real4 = gen_con(z_real4, param);
 c_real5 = gen_con(z_real5, param);
 
 
-t_sim1 = z_real1(1,:);
+t_sim1 = z_real5(1,:);
 
 extrainp_titles_labels = {'interpreter','latex','fontsize',22};
 extrainp_legend = {'interpreter','latex','fontsize',15}; 
@@ -58,10 +58,10 @@ xlabel('tid (s)'),ylabel('edot')
 figure();
 plot(t, c);
 hold on
-plot(t_sim1, z_real1(6,:)*pi/180,'LineWidth',1);
-plot(t_sim1, z_real2(6,:)*pi/180,'LineWidth',1);
-plot(t_sim1, z_real3(6,:)*pi/180,'LineWidth',1);
-plot(t_sim1, z_real4(6,:)*pi/180,'LineWidth',1);
+% plot(t_sim1, z_real1(6,:)*pi/180,'LineWidth',1);
+% plot(t_sim1, z_real2(6,:)*pi/180,'LineWidth',1);
+% plot(t_sim1, z_real3(6,:)*pi/180,'LineWidth',1);
+% plot(t_sim1, z_real4(6,:)*pi/180,'LineWidth',1);
 plot(t_sim1, z_real5(6,:)*pi/180,'LineWidth',1);
 axis([0 20 -inf inf])
 set(gca, 'FontSize', 15);
@@ -70,5 +70,19 @@ title("Elevation w/ Constraint",extrainp_titles_labels{:});
 xlabel("$t$ [s]",extrainp_titles_labels{:});
 ylabel("$e$ [rad]",extrainp_titles_labels{:});
 
-
-cd ('../..')
+%% Pitch plot
+figure();
+plot(t, x3);
+hold on
+% plot(t_sim1, z_real1(4,:)*pi/180,'LineWidth',1);
+% plot(t_sim1, z_real2(4,:)*pi/180,'LineWidth',1);
+% plot(t_sim1, z_real3(4,:)*pi/180,'LineWidth',1);
+% plot(t_sim1, z_real4(4,:)*pi/180,'LineWidth',1);
+plot(t_sim1, z_real5(4,:)*pi/180,'LineWidth',1);
+axis([0 20 -inf inf])
+set(gca, 'FontSize', 15);
+legend({},'Location','northeast',extrainp_legend{:});
+title("Pitch",extrainp_titles_labels{:});
+xlabel("$t$ [s]",extrainp_titles_labels{:});
+ylabel("$p$ [rad]",extrainp_titles_labels{:});
+%cd ('../..')

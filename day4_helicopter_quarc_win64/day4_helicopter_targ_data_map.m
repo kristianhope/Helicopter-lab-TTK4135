@@ -157,7 +157,7 @@
 	  section.data(17).logicalSrcIdx = 27;
 	  section.data(17).dtTransOffset = 16;
 	
-	  ;% day4_helicopter_P.Constant_Value
+	  ;% day4_helicopter_P.lambda_0_Value
 	  section.data(18).logicalSrcIdx = 28;
 	  section.data(18).dtTransOffset = 17;
 	
@@ -181,7 +181,7 @@
 	  section.data(23).logicalSrcIdx = 33;
 	  section.data(23).dtTransOffset = 22;
 	
-	  ;% day4_helicopter_P.Gain_Gain_b
+	  ;% day4_helicopter_P.Gain_Gain_l
 	  section.data(24).logicalSrcIdx = 34;
 	  section.data(24).dtTransOffset = 23;
 	
@@ -189,7 +189,7 @@
 	  section.data(25).logicalSrcIdx = 35;
 	  section.data(25).dtTransOffset = 24;
 	
-	  ;% day4_helicopter_P.Gain_Gain_j
+	  ;% day4_helicopter_P.Gain_Gain_a
 	  section.data(26).logicalSrcIdx = 36;
 	  section.data(26).dtTransOffset = 25;
 	
@@ -205,7 +205,7 @@
 	  section.data(29).logicalSrcIdx = 39;
 	  section.data(29).dtTransOffset = 28;
 	
-	  ;% day4_helicopter_P.Gain_Gain_f
+	  ;% day4_helicopter_P.Gain_Gain_ae
 	  section.data(30).logicalSrcIdx = 40;
 	  section.data(30).dtTransOffset = 29;
 	
@@ -213,7 +213,7 @@
 	  section.data(31).logicalSrcIdx = 41;
 	  section.data(31).dtTransOffset = 30;
 	
-	  ;% day4_helicopter_P.Gain_Gain_e
+	  ;% day4_helicopter_P.Gain_Gain_lv
 	  section.data(32).logicalSrcIdx = 42;
 	  section.data(32).dtTransOffset = 31;
 	
@@ -233,7 +233,7 @@
 	  section.data(36).logicalSrcIdx = 46;
 	  section.data(36).dtTransOffset = 35;
 	
-	  ;% day4_helicopter_P.Gain_Gain_fa
+	  ;% day4_helicopter_P.Gain_Gain_n
 	  section.data(37).logicalSrcIdx = 47;
 	  section.data(37).dtTransOffset = 36;
 	
@@ -261,7 +261,7 @@
 	  section.data(43).logicalSrcIdx = 53;
 	  section.data(43).dtTransOffset = 42;
 	
-	  ;% day4_helicopter_P.Gain_Gain_ez
+	  ;% day4_helicopter_P.Gain_Gain_a1
 	  section.data(44).logicalSrcIdx = 54;
 	  section.data(44).dtTransOffset = 43;
 	
@@ -581,7 +581,7 @@
 	  section.data(3).logicalSrcIdx = 2;
 	  section.data(3).dtTransOffset = 2;
 	
-	  ;% day4_helicopter_B.Gain_b
+	  ;% day4_helicopter_B.Gain_d
 	  section.data(4).logicalSrcIdx = 3;
 	  section.data(4).dtTransOffset = 3;
 	
@@ -589,11 +589,11 @@
 	  section.data(5).logicalSrcIdx = 4;
 	  section.data(5).dtTransOffset = 4;
 	
-	  ;% day4_helicopter_B.Gain_n
+	  ;% day4_helicopter_B.Gain_i
 	  section.data(6).logicalSrcIdx = 5;
 	  section.data(6).dtTransOffset = 5;
 	
-	  ;% day4_helicopter_B.Gain_k
+	  ;% day4_helicopter_B.Gain_b
 	  section.data(7).logicalSrcIdx = 6;
 	  section.data(7).dtTransOffset = 6;
 	
@@ -601,7 +601,7 @@
 	  section.data(8).logicalSrcIdx = 7;
 	  section.data(8).dtTransOffset = 7;
 	
-	  ;% day4_helicopter_B.Gain_d
+	  ;% day4_helicopter_B.Gain_e
 	  section.data(9).logicalSrcIdx = 8;
 	  section.data(9).dtTransOffset = 8;
 	
@@ -609,7 +609,7 @@
 	  section.data(10).logicalSrcIdx = 9;
 	  section.data(10).dtTransOffset = 9;
 	
-	  ;% day4_helicopter_B.Gain_i
+	  ;% day4_helicopter_B.Gain_dg
 	  section.data(11).logicalSrcIdx = 10;
 	  section.data(11).dtTransOffset = 10;
 	
@@ -932,8 +932,8 @@
   ;%
 
 
-  targMap.checksum0 = 1881219597;
-  targMap.checksum1 = 3690297916;
-  targMap.checksum2 = 759141438;
-  targMap.checksum3 = 2394120872;
+  targMap.checksum0 = 1114028809;
+  targMap.checksum1 = 78721603;
+  targMap.checksum2 = 806027582;
+  targMap.checksum3 = 3861426760;
 

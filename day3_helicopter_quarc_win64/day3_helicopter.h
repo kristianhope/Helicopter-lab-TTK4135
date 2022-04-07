@@ -7,9 +7,9 @@
  *
  * Code generation for model "day3_helicopter".
  *
- * Model version              : 11.10
+ * Model version              : 11.14
  * Simulink Coder version : 9.4 (R2020b) 29-Jul-2020
- * C source code generated on : Sun Apr  3 20:55:07 2022
+ * C source code generated on : Mon Apr  4 15:54:26 2022
  *
  * Target selection: quarc_win64.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -1035,7 +1035,7 @@ typedef struct {
 /* Parameters (default storage) */
 struct P_day3_helicopter_T_ {
   real_T K[4];                         /* Variable: K
-                                        * Referenced by: '<S5>/Gain'
+                                        * Referenced by: '<S5>/K'
                                         */
   real_T K_ed;                         /* Variable: K_ed
                                         * Referenced by: '<S3>/K_ed'

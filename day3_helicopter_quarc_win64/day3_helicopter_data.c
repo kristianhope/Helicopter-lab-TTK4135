@@ -7,9 +7,9 @@
  *
  * Code generation for model "day3_helicopter".
  *
- * Model version              : 11.10
+ * Model version              : 11.14
  * Simulink Coder version : 9.4 (R2020b) 29-Jul-2020
- * C source code generated on : Sun Apr  3 20:55:07 2022
+ * C source code generated on : Mon Apr  4 15:54:26 2022
  *
  * Target selection: quarc_win64.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -24,10 +24,10 @@
 /* Block parameters (default storage) */
 P_day3_helicopter_T day3_helicopter_P = {
   /* Variable: K
-   * Referenced by: '<S5>/Gain'
+   * Referenced by: '<S5>/K'
    */
-  { -0.94800697167203929, -3.3414570467319193, 1.8282008975661466,
-    0.71733805029962228 },
+  { -0.46569798260716894, -2.0438387509332472, 1.1301578887762491,
+    0.42583202407434095 },
 
   /* Variable: K_ed
    * Referenced by: '<S3>/K_ed'

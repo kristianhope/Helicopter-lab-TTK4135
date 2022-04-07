@@ -1,6 +1,6 @@
 run ('day2_optimalpath.m')
 
-cd ('data_files/day2')
+cd ('data_files/day2/round2')
 
 load('day_2_r_01.mat');
 z_real1 = state(:,:);
@@ -47,4 +47,4 @@ xlabel("$t$ [s]",extrainp_titles_labels{:});
 ylabel("$\lambda$ [rad]",extrainp_titles_labels{:});
 
 
-cd ('../..')
+cd ('../../..')

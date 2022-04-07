@@ -7,9 +7,9 @@
  *
  * Code generation for model "day2_helicopter".
  *
- * Model version              : 11.9
+ * Model version              : 11.16
  * Simulink Coder version : 9.4 (R2020b) 29-Jul-2020
- * C source code generated on : Sun Apr  3 20:40:05 2022
+ * C source code generated on : Tue Apr  5 19:33:01 2022
  *
  * Target selection: quarc_win64.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -62,7 +62,7 @@ static const char_T * rtDataTypeNames[] = {
 
 /* data type transitions for block I/O structure */
 static DataTypeTransition rtBTransitions[] = {
-  { (char_T *)(&day2_helicopter_B.TravelCounttorad), 0, 0, 15 }
+  { (char_T *)(&day2_helicopter_B.TravelCounttorad), 0, 0, 17 }
   ,
 
   { (char_T *)(&day2_helicopter_DW.HILInitialize_AIMinimums[0]), 0, 0, 70 },
@@ -77,7 +77,7 @@ static DataTypeTransition rtBTransitions[] = {
 
   { (char_T *)(&day2_helicopter_DW.HILInitialize_POSortedChans[0]), 7, 0, 8 },
 
-  { (char_T *)(&day2_helicopter_DW.ToFile3_IWORK.Count), 10, 0, 2 },
+  { (char_T *)(&day2_helicopter_DW.FromWorkspace_IWORK.PrevIndex), 10, 0, 2 },
 
   { (char_T *)(&day2_helicopter_DW.If_ActiveSubsystem), 2, 0, 2 }
 };

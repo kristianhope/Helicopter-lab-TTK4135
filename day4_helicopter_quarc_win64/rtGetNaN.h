@@ -7,9 +7,9 @@
  *
  * Code generation for model "day4_helicopter".
  *
- * Model version              : 11.13
+ * Model version              : 11.18
  * Simulink Coder version : 9.4 (R2020b) 29-Jul-2020
- * C source code generated on : Sun Apr  3 21:05:33 2022
+ * C source code generated on : Tue Apr  5 19:25:33 2022
  *
  * Target selection: quarc_win64.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping

@@ -1,6 +1,6 @@
 %% Initialization and model definition
 clear all
-init08; % Change this to the init file corresponding to your helicopter
+init08;
 addpath('utilities');
 % Discrete time system model. x = [lambda r p p_dot]'
 dt	= 0.25; % sampling time
@@ -38,11 +38,11 @@ xu(3)   = uu;                           % Upper bound on state x3
 vlb(N*mx+M*mu)  = 0;                    % We want the last input to be zero
 vub(N*mx+M*mu)  = 0;                    % We want the last input to be zero
 
-% Generate the matrix Q and the vector c (objecitve function weights in the QP problem) 
-Q1 = diag([2 0 0 0]);                   % Weight on states
-P1 = 10;                                % Weight on input
-Q = gen_q(Q1,P1,N,M);                   % Generate Q
-c = zeros(N*(mx+mu),1);                 % Generate c, this is the linear constant term in the QP
+% Generate the matrix G and the vector c (objecitve function weights in the QP problem) 
+Q = diag([1 0 0 0]);
+R = 0.1;                                           % Weight on input 1
+I_N = eye(N);
+G = 2*blkdiag(kron(I_N, Q), kron(I_N, R));        % Generate G
 
 %% Generate system matrixes for linear model
 Aeq = gen_aeq(A_d,B_d,N,mx,mu);         % Generate A
@@ -50,7 +50,7 @@ beq = [A_d*x0; zeros((N-1)*mx,1)];      % Generate b
 
 %% Solve QP problem with linear model
 tic
-[z,lambda] = quadprog(Q,c,[],[],Aeq,beq,vlb,vub,x0);
+[z,lambda] = quadprog(G,[],[],[],Aeq,beq,vlb,vub,x0);
 t1=toc;
 
 %% Extract control inputs and states
